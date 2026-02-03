@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 26th Birthday ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d4a373;
+            --secondary: #8b7355;
+            --accent: #f5e6d3;
+            --bg-dark: #1a1614;
+            --text-light: #f5f5f5;
+            --text-muted: rgba(245, 245, 245, 0.7);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Elegant Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212, 163, 115, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 115, 85, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        /* Subtle Pattern */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f5e6d3' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(245, 230, 211, 0.1);
+            border-radius: 24px;
+            padding: 60px 50px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header Label */
+        .label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        /* Main Title */
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(42px, 7vw, 68px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--accent);
+            text-align: center;
+        }
+
+        /* Photo Container */
+        .photo-container {
+            margin: 40px auto;
+            text-align: center;
+            animation: fadeIn 1.2s ease-out 0.3s both;
+        }
+
+        .photo-frame {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary);
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 0 10px rgba(212, 163, 115, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Age Number */
+        .age-section {
+            text-align: center;
+            margin: 40px 0;
+            animation: fadeIn 1.2s ease-out 0.4s both;
+        }
+
+        .age {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(100px, 15vw, 140px);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(212, 163, 115, 0.3);
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-top: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* Wishes Section */
+        .wishes {
+            margin: 40px 0;
+            animation: fadeIn 1.2s ease-out 0.6s both;
+        }
+
+        .wish-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--primary);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .wish-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateX(5px);
+        }
+
+        .wish-icon {
+            font-size: 24px;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .wish-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .wish-text strong {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* Message Box */
+        .message-box {
+            background: rgba(212, 163, 115, 0.08);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+            text-align: center;
+            animation: fadeIn 1.2s ease-out 0.8s both;
+        }
+
+        .message {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: fadeIn 1.5s ease-out 1s both;
+        }
+
+        .music-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: 2px solid rgba(245, 230, 211, 0.3);
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(212, 163, 115, 0.4);
+        }
+
+        .music-btn:active {
+            transform: scale(0.95);
+        }
+
+        .music-btn.playing {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 15px 50px rgba(212, 163, 115, 0.6);
+            }
+        }
+
+        /* Date */
+        .date {
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 40px;
+            animation: fadeIn 1.2s ease-out 1s both;
+        }
+
+        /* Decorative Elements */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 50;
+            animation: sparkleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkleFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 0.8;
+            }
+        }
+
+        /* Confetti */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            animation: confettiFall linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card {
+                padding: 40px 30px;
+            }
+
+            .photo-frame {
+                width: 160px;
+                height: 160px;
+            }
+
+            .wish-item {
+                padding: 16px;
+            }
+
+            .message-box {
+                padding: 24px;
+            }
+
+            .music-player {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .music-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            .wish-icon {
+                font-size: 20px;
+                margin-right: 12px;
+            }
+
+            .wish-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sparkles Decoration -->
+    <div class="sparkle" style="top: 10%; left: 10%; font-size: 20px;">✨</div>
+    <div class="sparkle" style="top: 20%; right: 15%; font-size: 16px; animation-delay: 1s;">⭐</div>
+    <div class="sparkle" style="bottom: 15%; left: 20%; font-size: 18px; animation-delay: 2s;">✨</div>
+    <div class="sparkle" style="bottom: 25%; right: 10%; font-size: 22px; animation-delay: 0.5s;">💫</div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+            🎵
+        </button>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="bgMusic" loop>
+        <source src="birthday-song.mp3" type="audio/mpeg">
+        <!-- Fallback: Gunakan link YouTube atau sound hosting -->
+    </audio>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <div class="label">Special Celebration</div>
+            <h1>Happy 26th Birthday!</h1>
+
+            <!-- Photo Section -->
+            <div class="photo-container">
+                <div class="photo-frame">
+                    <img src="photo.jpg" alt="Birthday Person" id="photoImg">
+                </div>
+            </div>
+
+            <!-- Age Section -->
+            <div class="age-section">
+                <div class="age">26</div>
+                <div class="subtitle">A Year of New Achievements</div>
+            </div>
+
+            <!-- Wishes -->
+            <div class="wishes">
+                <div class="wish-item">
+                    <div class="wish-icon">🎓</div>
+                    <div class="wish-text">
+                        Semoga <strong>kuliahnya lancar</strong> dan cepat selesai. Segala ujian, tugas, dan skripsi berjalan dengan mudah dan hasilnya memuaskan!
+                    </div>
+                </div>
+
+                <div class="wish-item">
+                    <div class="wish-icon">🏆</div>
+                    <div class="wish-text">
+                        Selamat jalan menuju <strong>wisuda</strong>! Segera menyandang gelar sarjana dan memulai karir cemerlang di dunia akuntansi.
+                    </div>
+                </div>
+
+                <div class="wish-item">
+                    <div class="wish-icon">✈️</div>
+                    <div class="wish-text">
+                        Semoga tahun ini bisa <strong>keliling dunia</strong>, menjelajahi tempat-tempat baru, dan mengumpulkan pengalaman tak terlupakan!
+                    </div>
+                </div>
+
+                <div class="wish-item">
+                    <div class="wish-icon">⭐</div>
+                    <div class="wish-text">
+                        Semoga semua <strong>mimpi dan cita-cita</strong> tercapai. Karir sukses, hidup bahagia, dan selalu diberkati dalam setiap langkah!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Message -->
+            <div class="message-box">
+                <p class="message">
+                    "Di usia yang ke-26 ini, semoga kamu terus berkembang menjadi pribadi yang lebih baik. 
+                    Terus berjuang, terus bersinar, dan jangan pernah berhenti mengejar impian. 
+                    You've got this! 💫"
+                </p>
+            </div>
+
+            <div class="date">February 4, 2026</div>
+        </div>
+    </div>
+
+    <script>
+        // Music Player
+        const music = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                musicBtn.textContent = '🎵';
+                musicBtn.classList.remove('playing');
+            } else {
+                music.play().catch(e => {
+                    console.log('Autoplay prevented:', e);
+                    alert('Klik tombol music lagi untuk memutar lagu! 🎵');
+                });
+                musicBtn.textContent = '🎶';
+                musicBtn.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Confetti
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#d4a373', '#8b7355', '#f5e6d3', '#c9a961'];
+            const confettiCount = 50;
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                
+                container.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 4000);
+            }
+        }
+
+        // Auto launch confetti on load
+        window.addEventListener('load', () => {
+            setTimeout(createConfetti, 500);
+            setTimeout(createConfetti, 1500);
+        });
+
+        // Click photo for confetti
+        document.getElementById('photoImg').addEventListener('click', () => {
+            createConfetti();
+        });
+
+        // Handle image error (fallback to placeholder)
+        document.getElementById('photoImg').addEventListener('error', function() {
+            // Create a placeholder gradient instead
+            const frame = this.parentElement;
+            frame.style.background = 'linear-gradient(135deg, #d4a373, #8b7355)';
+            frame.style.display = 'flex';
+            frame.style.alignItems = 'center';
+            frame.style.justifyContent = 'center';
+            frame.innerHTML = '<span style="font-size: 60px;">👤</span>';
+        });
+    </script>
+</body>
+</html>
