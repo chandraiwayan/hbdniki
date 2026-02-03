@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 26th Birthday ✨</title>
+    <title>Happy 26th Birthday Nichi ✨</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,28 +15,30 @@
         }
 
         :root {
-            --primary: #a78bfa;
-            --secondary: #c084fc;
-            --accent: #e9d5ff;
-            --glow: #8b5cf6;
-            --bg-dark: #0f0a1e;
-            --bg-card: rgba(147, 112, 219, 0.1);
-            --text-light: #ffffff;
-            --text-muted: rgba(255, 255, 255, 0.7);
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --primary: #9db4c0;
+            --secondary: #b8a9c9;
+            --accent: #c9d6df;
+            --lavender: #a8a4ce;
+            --soft-blue: #87a7b3;
+            --bg-dark: #1a1d2e;
+            --bg-mid: #242840;
+            --cream: #f8f6fa;
+            --text-light: #f8f6fa;
+            --text-muted: rgba(248, 246, 250, 0.7);
+            --glass-bg: rgba(157, 180, 192, 0.06);
+            --glass-border: rgba(184, 169, 201, 0.18);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: linear-gradient(145deg, var(--bg-dark) 0%, var(--bg-mid) 50%, #1e2235 100%);
             color: var(--text-light);
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
         }
 
-        /* Futuristic Background */
+        /* Subtle Gradient Background */
         body::before {
             content: '';
             position: fixed;
@@ -45,81 +47,42 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(192, 132, 252, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
-            animation: gradientPulse 10s ease infinite;
+                radial-gradient(ellipse at 20% 0%, rgba(168, 164, 206, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(157, 180, 192, 0.1) 0%, transparent 50%);
             z-index: 0;
         }
 
-        @keyframes gradientPulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        /* Animated Grid */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(90deg, rgba(167, 139, 250, 0.03) 1px, transparent 1px),
-                linear-gradient(rgba(167, 139, 250, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: 1;
-            pointer-events: none;
-            animation: gridMove 20s linear infinite;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Glowing Orbs */
+        /* Soft Orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.3;
-            animation: orbFloat 15s ease-in-out infinite;
+            filter: blur(120px);
+            opacity: 0.15;
+            animation: orbFloat 25s ease-in-out infinite;
             pointer-events: none;
-            z-index: 2;
+            z-index: 1;
         }
 
         .orb-1 {
-            width: 600px;
-            height: 600px;
-            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-            top: -20%;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #a8a4ce, #9db4c0);
+            top: -15%;
             left: -10%;
         }
 
         .orb-2 {
-            width: 500px;
-            height: 500px;
-            background: linear-gradient(135deg, #c084fc, #e9d5ff);
-            bottom: -15%;
-            right: -10%;
-            animation-delay: 5s;
-        }
-
-        .orb-3 {
             width: 400px;
             height: 400px;
-            background: linear-gradient(135deg, #7c3aed, #a78bfa);
-            top: 40%;
-            right: 15%;
-            animation-delay: 10s;
+            background: linear-gradient(135deg, #c9d6df, #b8a9c9);
+            bottom: -10%;
+            right: -5%;
+            animation-delay: 8s;
         }
 
         @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(80px, -80px) scale(1.1); }
-            66% { transform: translate(-60px, 60px) scale(0.9); }
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(40px, -30px); }
         }
 
         /* Container */
@@ -133,20 +96,19 @@
             padding: 40px 20px;
         }
 
-        /* iOS Style Glass Card */
+        /* Elegant Glass Card */
         .card {
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
-            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            backdrop-filter: blur(40px) saturate(150%);
+            -webkit-backdrop-filter: blur(40px) saturate(150%);
             border: 1px solid var(--glass-border);
-            border-radius: 32px;
+            border-radius: 24px;
             padding: 60px 50px;
             max-width: 650px;
             width: 100%;
             box-shadow: 
-                0 30px 80px rgba(139, 92, 246, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15),
-                0 0 0 1px rgba(139, 92, 246, 0.1);
+                0 30px 80px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
             position: relative;
             overflow: hidden;
             animation: cardFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -155,17 +117,15 @@
         @keyframes cardFadeIn {
             from {
                 opacity: 0;
-                transform: translateY(50px) scale(0.95);
-                filter: blur(10px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0) scale(1);
-                filter: blur(0);
+                transform: translateY(0);
             }
         }
 
-        /* Shimmer Effect */
+        /* Subtle Shimmer */
         .card::before {
             content: '';
             position: absolute;
@@ -173,8 +133,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: shimmer 3s infinite;
+            background: linear-gradient(90deg, transparent, rgba(184, 169, 201, 0.05), transparent);
+            animation: shimmer 6s infinite;
         }
 
         @keyframes shimmer {
@@ -182,14 +142,15 @@
             100% { left: 200%; }
         }
 
-        /* Header Label - CENTERED */
+        /* Header Label */
         .label {
+            font-family: 'Montserrat', sans-serif;
             font-size: 11px;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
             color: var(--secondary);
             margin-bottom: 20px;
-            font-weight: 600;
+            font-weight: 400;
             text-align: center;
             animation: fadeInDown 0.8s ease-out 0.2s both;
         }
@@ -197,7 +158,7 @@
         @keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(-15px);
             }
             to {
                 opacity: 1;
@@ -207,67 +168,59 @@
 
         /* Main Title */
         h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(44px, 7vw, 72px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(36px, 5.5vw, 52px);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 10px;
             text-align: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
-            background-size: 200% 200%;
+            color: var(--cream);
+            animation: fadeIn 1s ease-out 0.4s both;
+            letter-spacing: 1px;
+        }
+
+        .title-accent {
+            display: block;
+            font-size: clamp(40px, 6.5vw, 62px);
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--lavender), var(--soft-blue), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientFlow 4s ease infinite, scaleIn 1s ease-out 0.4s both;
-            text-shadow: 0 0 60px rgba(167, 139, 250, 0.5);
         }
 
-        @keyframes gradientFlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .name-highlight {
+            color: var(--accent);
+            font-style: italic;
         }
 
         /* Photo Container */
         .photo-container {
-            margin: 40px auto;
+            margin: 35px auto 20px;
             text-align: center;
             animation: fadeIn 1.2s ease-out 0.5s both;
         }
 
         .photo-frame {
             position: relative;
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             margin: 0 auto;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid rgba(167, 139, 250, 0.5);
+            border: 2px solid var(--secondary);
             box-shadow: 
-                0 0 0 1px rgba(139, 92, 246, 0.3),
-                0 0 40px rgba(139, 92, 246, 0.4),
-                0 20px 50px rgba(0, 0, 0, 0.3),
-                inset 0 0 0 8px rgba(167, 139, 250, 0.1);
+                0 0 0 8px rgba(184, 169, 201, 0.1),
+                0 20px 50px rgba(0, 0, 0, 0.4);
             transition: all 0.4s ease;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(192, 132, 252, 0.2));
+            background: linear-gradient(135deg, rgba(168, 164, 206, 0.2), rgba(157, 180, 192, 0.2));
         }
 
         .photo-frame:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 
-                0 0 0 1px rgba(139, 92, 246, 0.5),
-                0 0 60px rgba(139, 92, 246, 0.6),
-                0 25px 60px rgba(0, 0, 0, 0.4);
+                0 0 0 10px rgba(184, 169, 201, 0.15),
+                0 25px 60px rgba(0, 0, 0, 0.5);
         }
 
         .photo-frame img {
@@ -276,50 +229,220 @@
             object-fit: cover;
         }
 
-        /* Age Number - Futuristic */
+        /* Birthday Cake - CSS Art */
+        .cake-container {
+            margin: 20px auto 35px;
+            text-align: center;
+            animation: fadeIn 1.2s ease-out 0.6s both;
+        }
+
+        .cake {
+            position: relative;
+            display: inline-block;
+            width: 160px;
+            height: 140px;
+        }
+
+        /* Candles */
+        .candles {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 18px;
+        }
+
+        .candle {
+            position: relative;
+            width: 7px;
+            height: 35px;
+            background: linear-gradient(180deg, #f0e6f5 0%, var(--secondary) 100%);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .candle::before {
+            content: '';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 9px;
+            height: 16px;
+            background: linear-gradient(180deg, #ffd700, #ff9500, #ff6b00);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker 1.5s ease-in-out infinite alternate;
+            box-shadow: 0 0 12px rgba(255, 200, 100, 0.6), 0 0 25px rgba(255, 150, 50, 0.3);
+        }
+
+        .candle::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 7px;
+            background: #2a2a3a;
+            border-radius: 1px;
+        }
+
+        @keyframes flicker {
+            0%, 100% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 1; }
+            50% { transform: translateX(-50%) scale(1.1) rotate(2deg); opacity: 0.9; }
+        }
+
+        /* Cake Layers */
+        .cake-top {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85px;
+            height: 40px;
+            background: linear-gradient(180deg, #f5f0fa 0%, #e8e0f0 100%);
+            border-radius: 8px 8px 0 0;
+            box-shadow: inset 0 -8px 15px rgba(0,0,0,0.08);
+        }
+
+        .cake-top::before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: -4px;
+            right: -4px;
+            height: 14px;
+            background: linear-gradient(180deg, var(--secondary), #a090b8);
+            border-radius: 50%;
+        }
+
+        /* Frosting drips */
+        .cake-top::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            left: 8px;
+            width: 70px;
+            height: 14px;
+            background: 
+                radial-gradient(ellipse 10px 9px at 8px 0px, var(--secondary) 70%, transparent 70%),
+                radial-gradient(ellipse 13px 11px at 30px 0px, var(--secondary) 70%, transparent 70%),
+                radial-gradient(ellipse 10px 9px at 52px 0px, var(--secondary) 70%, transparent 70%);
+        }
+
+        .cake-middle {
+            position: absolute;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 115px;
+            height: 42px;
+            background: linear-gradient(180deg, #f0ebf5 0%, #e5ddef 100%);
+            border-radius: 6px;
+            box-shadow: inset 0 -8px 15px rgba(0,0,0,0.08);
+        }
+
+        .cake-middle::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -4px;
+            right: -4px;
+            height: 12px;
+            background: linear-gradient(180deg, var(--soft-blue), #7a9aa8);
+            border-radius: 50%;
+        }
+
+        .cake-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 36px;
+            background: linear-gradient(180deg, #ede8f2 0%, #e0d8ea 100%);
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .cake-bottom::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -3px;
+            right: -3px;
+            height: 12px;
+            background: linear-gradient(180deg, var(--lavender), #9590b8);
+            border-radius: 50%;
+        }
+
+        /* Cake decorations */
+        .cake-decor {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 105px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cake-decor span {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba(201, 214, 223, 0.5);
+        }
+
+        /* Cake plate */
+        .cake-plate {
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 14px;
+            background: linear-gradient(180deg, rgba(184, 169, 201, 0.3), rgba(184, 169, 201, 0.1));
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Age Section */
         .age-section {
             text-align: center;
-            margin: 40px 0;
+            margin: 30px 0;
             animation: fadeIn 1.2s ease-out 0.7s both;
         }
 
         .age {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(110px, 18vw, 160px);
-            font-weight: 800;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(85px, 14vw, 120px);
+            font-weight: 600;
             line-height: 1;
-            background: linear-gradient(135deg, #a78bfa, #c084fc, #e9d5ff);
+            background: linear-gradient(135deg, var(--lavender), var(--soft-blue), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: drop-shadow(0 0 40px rgba(139, 92, 246, 0.6));
-            animation: glowPulse 3s ease-in-out infinite;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
 
         .age:hover {
-            transform: scale(1.05);
-        }
-
-        @keyframes glowPulse {
-            0%, 100% {
-                filter: drop-shadow(0 0 40px rgba(139, 92, 246, 0.6));
-            }
-            50% {
-                filter: drop-shadow(0 0 60px rgba(167, 139, 250, 0.8));
-            }
+            transform: scale(1.03);
         }
 
         .subtitle {
-            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
             color: var(--text-muted);
             margin-top: 12px;
-            letter-spacing: 2px;
-            font-weight: 500;
+            letter-spacing: 3px;
+            font-weight: 300;
+            text-transform: uppercase;
         }
 
-        /* Wishes Section - Glass Style */
+        /* Wishes Section */
         .wishes {
             margin: 40px 0;
             animation: fadeIn 1.2s ease-out 0.9s both;
@@ -328,76 +451,102 @@
         .wish-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
-            padding: 20px;
-            background: rgba(167, 139, 250, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(167, 139, 250, 0.15);
-            border-left: 3px solid var(--primary);
-            border-radius: 16px;
+            margin-bottom: 18px;
+            padding: 20px 24px;
+            background: rgba(184, 169, 201, 0.04);
+            border: 1px solid rgba(184, 169, 201, 0.1);
+            border-left: 2px solid var(--secondary);
+            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .wish-item:hover {
-            background: rgba(167, 139, 250, 0.1);
-            transform: translateX(8px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+            background: rgba(184, 169, 201, 0.08);
+            transform: translateX(6px);
         }
 
         .wish-icon {
-            font-size: 24px;
+            font-size: 22px;
             margin-right: 16px;
             flex-shrink: 0;
-            filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.5));
         }
 
         .wish-text {
-            font-size: 15px;
-            line-height: 1.7;
+            font-size: 16px;
+            line-height: 1.8;
             color: var(--text-muted);
         }
 
         .wish-text strong {
-            color: var(--text-light);
+            color: var(--cream);
             font-weight: 600;
         }
 
-        /* Message Box - iOS Glass */
+        /* Message Box */
         .message-box {
-            background: rgba(167, 139, 250, 0.08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(167, 139, 250, 0.2);
-            border-radius: 20px;
+            background: rgba(184, 169, 201, 0.06);
+            border: 1px solid rgba(184, 169, 201, 0.12);
+            border-radius: 16px;
             padding: 32px;
             margin: 40px 0;
             text-align: center;
             animation: fadeIn 1.2s ease-out 1.1s both;
-            box-shadow: 
-                inset 0 1px 0 rgba(255, 255, 255, 0.1),
-                0 10px 30px rgba(139, 92, 246, 0.1);
         }
 
         .message {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-light);
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--cream);
             font-style: italic;
         }
 
         /* Date */
         .date {
+            font-family: 'Montserrat', sans-serif;
             text-align: center;
-            font-size: 12px;
-            letter-spacing: 3px;
+            font-size: 11px;
+            letter-spacing: 4px;
             text-transform: uppercase;
             color: var(--text-muted);
             margin-top: 40px;
             animation: fadeIn 1.2s ease-out 1.3s both;
+            font-weight: 300;
+        }
+
+        /* Made with love */
+        .made-with-love {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: rgba(248, 246, 250, 0.4);
+            margin-top: 30px;
+            animation: fadeIn 1.2s ease-out 1.5s both;
+            font-weight: 300;
+        }
+
+        .made-with-love span {
+            color: #e8a0a0;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating Elements - Reduced and Subtle */
+        .float-element {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+            opacity: 0.35;
+            animation: gentleFloat 8s ease-in-out infinite;
+            color: var(--secondary);
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
 
         /* Confetti */
@@ -413,9 +562,8 @@
 
         .confetti {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            background: var(--primary);
+            width: 8px;
+            height: 8px;
             animation: confettiFall linear forwards;
         }
 
@@ -423,26 +571,6 @@
             to {
                 transform: translateY(100vh) rotate(720deg);
                 opacity: 0;
-            }
-        }
-
-        /* Sparkles */
-        .sparkle {
-            position: fixed;
-            pointer-events: none;
-            z-index: 50;
-            animation: sparkleFloat 4s ease-in-out infinite;
-            filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.8));
-        }
-
-        @keyframes sparkleFloat {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-                opacity: 0.4;
-            }
-            50% {
-                transform: translateY(-30px) scale(1.2);
-                opacity: 1;
             }
         }
 
@@ -460,16 +588,20 @@
         /* Responsive */
         @media (max-width: 768px) {
             .card {
-                padding: 40px 30px;
+                padding: 40px 28px;
             }
 
             .photo-frame {
-                width: 160px;
-                height: 160px;
+                width: 150px;
+                height: 150px;
+            }
+
+            .cake {
+                transform: scale(0.85);
             }
 
             .wish-item {
-                padding: 16px;
+                padding: 16px 18px;
             }
 
             .message-box {
@@ -480,19 +612,20 @@
         @media (max-width: 480px) {
             .card {
                 padding: 30px 20px;
-                border-radius: 24px;
+                border-radius: 20px;
             }
 
             .label {
                 font-size: 10px;
+                letter-spacing: 4px;
             }
 
-            h1 {
-                margin-bottom: 20px;
+            .cake {
+                transform: scale(0.75);
             }
 
             .wish-icon {
-                font-size: 20px;
+                font-size: 18px;
                 margin-right: 12px;
             }
 
@@ -503,18 +636,14 @@
     </style>
 </head>
 <body>
-    <!-- Glowing Orbs -->
+    <!-- Soft Orbs -->
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
 
-    <!-- Sparkles -->
-    <div class="sparkle" style="top: 8%; left: 12%; font-size: 24px;">✨</div>
-    <div class="sparkle" style="top: 15%; right: 18%; font-size: 20px; animation-delay: 1s;">💫</div>
-    <div class="sparkle" style="bottom: 12%; left: 15%; font-size: 22px; animation-delay: 2s;">⭐</div>
-    <div class="sparkle" style="bottom: 20%; right: 12%; font-size: 26px; animation-delay: 0.5s;">✨</div>
-    <div class="sparkle" style="top: 50%; left: 8%; font-size: 18px; animation-delay: 1.5s;">💜</div>
-    <div class="sparkle" style="top: 45%; right: 10%; font-size: 20px; animation-delay: 2.5s;">🌟</div>
+    <!-- Subtle Floating Elements -->
+    <div class="float-element" style="top: 10%; left: 8%; font-size: 18px; animation-delay: 0s;">✦</div>
+    <div class="float-element" style="top: 20%; right: 12%; font-size: 14px; animation-delay: 2s;">✧</div>
+    <div class="float-element" style="bottom: 15%; left: 10%; font-size: 16px; animation-delay: 4s;">✦</div>
 
     <!-- Confetti Container -->
     <div class="confetti-container" id="confetti-container"></div>
@@ -525,20 +654,42 @@
     <!-- Main Content -->
     <div class="container">
         <div class="card">
-            <div class="label">Special Celebration</div>
-            <h1>Happy 26th Birthday!</h1>
+            <div class="label">Special Day</div>
+            <h1>Happy Birthday,<span class="title-accent">Nichi! 🎀</span></h1>
 
             <!-- Photo Section -->
             <div class="photo-container">
                 <div class="photo-frame">
-                    <img src="photo.jpg" alt="Birthday Person" id="photoImg">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" alt="Nichi" id="photoImg">
+                </div>
+            </div>
+
+            <!-- Birthday Cake -->
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="candles">
+                        <div class="candle"></div>
+                        <div class="candle" style="height: 30px;"></div>
+                        <div class="candle"></div>
+                    </div>
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-decor">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cake-bottom"></div>
+                    <div class="cake-plate"></div>
                 </div>
             </div>
 
             <!-- Age Section -->
             <div class="age-section">
                 <div class="age" onclick="createConfetti()">26</div>
-                <div class="subtitle">A Year of New Achievements</div>
+                <div class="subtitle">Another Year of Magic</div>
             </div>
 
             <!-- Wishes -->
@@ -546,28 +697,28 @@
                 <div class="wish-item">
                     <div class="wish-icon">🎓</div>
                     <div class="wish-text">
-                        Semoga <strong>kuliahnya lancar</strong> dan cepat selesai. Segala ujian, tugas, dan skripsi berjalan dengan mudah dan hasilnya memuaskan!
+                        Wishing you a <strong>smooth final year</strong> in college! May all your assignments and final projects go well and bring amazing results.
                     </div>
                 </div>
 
                 <div class="wish-item">
-                    <div class="wish-icon">🏆</div>
+                    <div class="wish-icon">✨</div>
                     <div class="wish-text">
-                        Selamat jalan menuju <strong>wisuda</strong>! Segera menyandang gelar sarjana dan memulai karir cemerlang di dunia akuntansi.
+                        May this year bring you <strong>endless happiness</strong>, good vibes, and all the beautiful things you deserve.
                     </div>
                 </div>
 
                 <div class="wish-item">
                     <div class="wish-icon">✈️</div>
                     <div class="wish-text">
-                        Semoga tahun ini bisa <strong>keliling dunia</strong>, menjelajahi tempat-tempat baru, dan mengumpulkan pengalaman tak terlupakan!
+                        Hope you get to <strong>explore new places</strong>, make unforgettable memories, and tick off things from your bucket list!
                     </div>
                 </div>
 
                 <div class="wish-item">
-                    <div class="wish-icon">⭐</div>
+                    <div class="wish-icon">💫</div>
                     <div class="wish-text">
-                        Semoga semua <strong>mimpi dan cita-cita</strong> tercapai. Karir sukses, hidup bahagia, dan selalu diberkati dalam setiap langkah!
+                        May all your <strong>dreams come true</strong> — a successful career, a happy life, and blessings in everything you do!
                     </div>
                 </div>
             </div>
@@ -575,13 +726,15 @@
             <!-- Personal Message -->
             <div class="message-box">
                 <p class="message">
-                    "Di usia yang ke-26 ini, semoga kamu terus berkembang menjadi pribadi yang lebih baik. 
-                    Terus berjuang, terus bersinar, dan jangan pernah berhenti mengejar impian. 
-                    You've got this! 💫"
+                    "At 26, may you keep growing into the amazing person you already are. 
+                    Keep shining, keep dreaming, and never stop believing in yourself. 
+                    You got this, Nichi! ✦"
                 </p>
             </div>
 
             <div class="date">February 4, 2026</div>
+            
+            <div class="made-with-love">made with <span>♥</span> by cancan</div>
         </div>
     </div>
 
@@ -591,7 +744,7 @@
     <script>
         // YouTube Player Setup
         let player;
-        const videoId = 'vhVBWw6rId0'; // From the URL you provided
+        const videoId = 'vhVBWw6rId0';
 
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('youtube-player', {
@@ -616,11 +769,9 @@
         }
 
         function onPlayerReady(event) {
-            // Mute first to enable autoplay (browser policy)
             event.target.mute();
             event.target.playVideo();
             
-            // Unmute after 100ms (some browsers allow this)
             setTimeout(() => {
                 event.target.unMute();
                 event.target.setVolume(50);
@@ -628,27 +779,25 @@
         }
 
         function onPlayerStateChange(event) {
-            // Keep looping
             if (event.data === YT.PlayerState.ENDED) {
                 player.playVideo();
             }
         }
 
-        // Confetti
+        // Elegant Confetti
         function createConfetti() {
             const container = document.getElementById('confetti-container');
-            const colors = ['#a78bfa', '#c084fc', '#e9d5ff', '#8b5cf6', '#7c3aed'];
-            const confettiCount = 60;
+            const colors = ['#a8a4ce', '#9db4c0', '#b8a9c9', '#c9d6df', '#f0e6f5'];
+            const confettiCount = 45;
 
             for (let i = 0; i < confettiCount; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti';
                 confetti.style.left = Math.random() * 100 + 'vw';
                 confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.animationDuration = (Math.random() * 2 + 2.5) + 's';
                 confetti.style.animationDelay = Math.random() * 0.5 + 's';
                 
-                // Random shapes
                 if (Math.random() > 0.5) {
                     confetti.style.borderRadius = '50%';
                 }
@@ -657,15 +806,14 @@
 
                 setTimeout(() => {
                     confetti.remove();
-                }, 4500);
+                }, 5000);
             }
         }
 
         // Auto launch confetti on load
         window.addEventListener('load', () => {
-            setTimeout(createConfetti, 800);
-            setTimeout(createConfetti, 2000);
-            setTimeout(createConfetti, 3500);
+            setTimeout(createConfetti, 1000);
+            setTimeout(createConfetti, 3000);
         });
 
         // Click photo for confetti
@@ -674,14 +822,14 @@
         // Handle image error (fallback)
         document.getElementById('photoImg').addEventListener('error', function() {
             const frame = this.parentElement;
-            frame.style.background = 'linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(192, 132, 252, 0.3))';
+            frame.style.background = 'linear-gradient(135deg, rgba(168, 164, 206, 0.3), rgba(157, 180, 192, 0.3))';
             frame.style.display = 'flex';
             frame.style.alignItems = 'center';
             frame.style.justifyContent = 'center';
-            frame.innerHTML = '<span style="font-size: 70px; filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.8));">👤</span>';
+            frame.innerHTML = '<span style="font-size: 60px;">👩</span>';
         });
 
-        // User interaction to unmute (backup method)
+        // User interaction to unmute
         let hasInteracted = false;
         document.addEventListener('click', function() {
             if (!hasInteracted && player) {
