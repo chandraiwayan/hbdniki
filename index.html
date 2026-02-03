@@ -199,9 +199,9 @@
             z-index: 10;
             min-height: 100vh;
             min-height: 100dvh;
-            padding: 50px 24px 80px;
+            padding: 50px 24px 20px;
             padding-top: max(50px, calc(env(safe-area-inset-top) + 30px));
-            padding-bottom: max(80px, calc(env(safe-area-inset-bottom) + 60px));
+            padding-bottom: max(20px, env(safe-area-inset-bottom));
             padding-left: max(24px, env(safe-area-inset-left));
             padding-right: max(24px, env(safe-area-inset-right));
             display: flex;
@@ -272,8 +272,8 @@
 
         .photo-wrapper {
             position: relative;
-            width: 220px;
-            height: 220px;
+            width: 260px;
+            height: 260px;
             margin: 0 auto;
         }
 
@@ -283,8 +283,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 210px;
-            height: 210px;
+            width: 248px;
+            height: 248px;
             border-radius: 50%;
             animation: ringRotate 20s linear infinite;
         }
@@ -308,8 +308,8 @@
         /* Decorative dots on ring */
         .deco-dot {
             position: absolute;
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: var(--secondary);
             box-shadow: 0 0 10px rgba(255, 200, 221, 0.6);
@@ -369,8 +369,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 230px;
-            height: 230px;
+            width: 270px;
+            height: 270px;
             border-radius: 50%;
             animation: ringRotateReverse 30s linear infinite;
         }
@@ -383,17 +383,17 @@
         /* Small stars on outer ring */
         .deco-star {
             position: absolute;
-            font-size: 12px;
+            font-size: 14px;
             opacity: 0.6;
             animation: starTwinkle 2s ease-in-out infinite;
         }
 
-        .deco-star:nth-child(1) { top: -6px; left: 50%; transform: translateX(-50%); }
-        .deco-star:nth-child(2) { top: 25%; right: -2px; animation-delay: 0.4s; }
-        .deco-star:nth-child(3) { bottom: 25%; right: -2px; animation-delay: 0.8s; }
-        .deco-star:nth-child(4) { bottom: -6px; left: 50%; transform: translateX(-50%); animation-delay: 1.2s; }
-        .deco-star:nth-child(5) { bottom: 25%; left: -2px; animation-delay: 1.6s; }
-        .deco-star:nth-child(6) { top: 25%; left: -2px; animation-delay: 2s; }
+        .deco-star:nth-child(1) { top: -8px; left: 50%; transform: translateX(-50%); }
+        .deco-star:nth-child(2) { top: 25%; right: -4px; animation-delay: 0.4s; }
+        .deco-star:nth-child(3) { bottom: 25%; right: -4px; animation-delay: 0.8s; }
+        .deco-star:nth-child(4) { bottom: -8px; left: 50%; transform: translateX(-50%); animation-delay: 1.2s; }
+        .deco-star:nth-child(5) { bottom: 25%; left: -4px; animation-delay: 1.6s; }
+        .deco-star:nth-child(6) { top: 25%; left: -4px; animation-delay: 2s; }
 
         @keyframes starTwinkle {
             0%, 100% { opacity: 0.4; transform: scale(1); }
@@ -414,8 +414,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 175px;
-            height: 175px;
+            width: 210px;
+            height: 210px;
             border-radius: 50%;
             overflow: hidden;
             background: linear-gradient(135deg, var(--primary), var(--secondary), var(--lavender));
@@ -566,13 +566,14 @@
             margin: 20px auto 24px;
             text-align: center;
             animation: fadeIn 0.6s ease-out 0.6s both;
+            position: relative;
         }
 
         .cake {
             position: relative;
             display: inline-block;
-            width: 160px;
-            height: 140px;
+            width: 180px;
+            height: 155px;
             animation: cakeFloat 3s ease-in-out infinite;
         }
 
@@ -587,13 +588,13 @@
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 18px;
+            gap: 22px;
         }
 
         .candle {
             position: relative;
-            width: 7px;
-            height: 32px;
+            width: 8px;
+            height: 36px;
             background: linear-gradient(180deg, #fff5f5 0%, var(--secondary) 100%);
             border-radius: 3px 3px 0 0;
         }
@@ -601,18 +602,18 @@
         .candle::before {
             content: '';
             position: absolute;
-            top: -13px;
+            top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            width: 9px;
-            height: 15px;
+            width: 10px;
+            height: 16px;
             background: linear-gradient(180deg, #fff3b0, #ffcc00, #ff8c00);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             animation: flame 0.8s ease-in-out infinite alternate;
             box-shadow: 
-                0 0 10px rgba(255, 200, 100, 0.8),
-                0 0 20px rgba(255, 150, 50, 0.5),
-                0 0 30px rgba(255, 100, 50, 0.3);
+                0 0 12px rgba(255, 200, 100, 0.8),
+                0 0 24px rgba(255, 150, 50, 0.5),
+                0 0 36px rgba(255, 100, 50, 0.3);
         }
 
         .candle::after {
@@ -640,9 +641,9 @@
         }
 
         .cake-top {
-            bottom: 62px;
-            width: 80px;
-            height: 38px;
+            bottom: 70px;
+            width: 90px;
+            height: 42px;
             background: linear-gradient(180deg, #fff5f8 0%, #ffe4ec 100%);
             box-shadow: inset 0 -5px 10px rgba(0,0,0,0.06);
         }
@@ -650,10 +651,10 @@
         .cake-top::before {
             content: '';
             position: absolute;
-            top: -6px;
-            left: -4px;
-            right: -4px;
-            height: 12px;
+            top: -7px;
+            left: -5px;
+            right: -5px;
+            height: 14px;
             background: linear-gradient(180deg, var(--secondary), #f8a5c2);
             border-radius: 50%;
         }
@@ -661,20 +662,20 @@
         .cake-top::after {
             content: '';
             position: absolute;
-            bottom: -9px;
+            bottom: -10px;
             left: 6px;
-            width: 68px;
-            height: 12px;
+            width: 78px;
+            height: 14px;
             background: 
-                radial-gradient(ellipse 9px 9px at 9px 0px, var(--secondary) 70%, transparent 70%),
-                radial-gradient(ellipse 11px 10px at 30px 0px, var(--secondary) 70%, transparent 70%),
-                radial-gradient(ellipse 9px 9px at 51px 0px, var(--secondary) 70%, transparent 70%);
+                radial-gradient(ellipse 10px 10px at 10px 0px, var(--secondary) 70%, transparent 70%),
+                radial-gradient(ellipse 12px 11px at 35px 0px, var(--secondary) 70%, transparent 70%),
+                radial-gradient(ellipse 10px 10px at 60px 0px, var(--secondary) 70%, transparent 70%);
         }
 
         .cake-middle {
-            bottom: 28px;
-            width: 108px;
-            height: 42px;
+            bottom: 32px;
+            width: 122px;
+            height: 46px;
             background: linear-gradient(180deg, #fff0f5 0%, #ffe0eb 100%);
             box-shadow: inset 0 -5px 10px rgba(0,0,0,0.06);
         }
@@ -682,46 +683,46 @@
         .cake-middle::before {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -4px;
-            right: -4px;
-            height: 11px;
+            top: -6px;
+            left: -5px;
+            right: -5px;
+            height: 12px;
             background: linear-gradient(180deg, var(--lavender), #7eb8da);
             border-radius: 50%;
         }
 
         .cake-bottom {
             bottom: 0;
-            width: 135px;
-            height: 36px;
+            width: 152px;
+            height: 40px;
             background: linear-gradient(180deg, #ffecf2 0%, #ffd9e4 100%);
-            border-radius: 0 0 10px 10px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
 
         .cake-bottom::before {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -3px;
-            right: -3px;
-            height: 11px;
+            top: -6px;
+            left: -4px;
+            right: -4px;
+            height: 12px;
             background: linear-gradient(180deg, var(--primary), #a89deb);
             border-radius: 50%;
         }
 
         .cake-decor {
             position: absolute;
-            bottom: 38px;
+            bottom: 42px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 12px;
+            gap: 14px;
         }
 
         .cake-decor span {
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             background: var(--gold);
             border-radius: 50%;
             box-shadow: 0 0 8px rgba(255, 214, 165, 0.8);
@@ -738,16 +739,28 @@
             50% { opacity: 1; transform: scale(1.4); }
         }
 
-        /* Wide shadow base for cake */
+        /* Very wide shadow base for cake - covers browser bar */
         .cake-shadow {
             position: absolute;
-            bottom: -12px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 200px;
-            height: 24px;
-            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 40%, transparent 70%);
+            width: 220px;
+            height: 30px;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 80%);
             border-radius: 50%;
+        }
+
+        /* Bottom gradient fade - covers browser bar */
+        .bottom-fade {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(22, 33, 62, 0.5) 30%, rgba(22, 33, 62, 0.9) 70%, #16213e 100%);
+            pointer-events: none;
+            z-index: 5;
         }
 
         /* Subtitle - NOW BELOW CAKE */
@@ -917,12 +930,13 @@
 
             h1 { font-size: 34px; }
             .title-accent { font-size: 38px; }
-            .photo-wrapper { width: 200px; height: 200px; }
-            .photo-frame { width: 155px; height: 155px; }
-            .deco-ring { width: 190px; height: 190px; }
-            .deco-ring-2 { width: 210px; height: 210px; }
+            .photo-wrapper { width: 230px; height: 230px; }
+            .photo-frame { width: 185px; height: 185px; }
+            .deco-ring { width: 218px; height: 218px; }
+            .deco-ring-2 { width: 240px; height: 240px; }
             .wish-text { font-size: 14px; }
             .wish-item { padding: 14px 16px; }
+            .cake { transform: scale(0.9); }
         }
 
         @media (min-height: 800px) {
@@ -930,11 +944,173 @@
                 justify-content: center;
             }
         }
+
+        /* Tap to Start Overlay */
+        .tap-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(160deg, #2d1f4e 0%, #1a1a2e 50%, #16213e 100%);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .tap-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .tap-content {
+            text-align: center;
+            animation: tapPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes tapPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .tap-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: tapFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes tapFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tap-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--lavender));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        .tap-subtitle {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .tap-rings {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+        }
+
+        .tap-rings span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid var(--secondary);
+            border-radius: 50%;
+            animation: tapRing 2s ease-out infinite;
+        }
+
+        .tap-rings span:nth-child(1) { width: 20px; height: 20px; }
+        .tap-rings span:nth-child(2) { width: 20px; height: 20px; animation-delay: 0.4s; }
+        .tap-rings span:nth-child(3) { width: 20px; height: 20px; animation-delay: 0.8s; }
+
+        @keyframes tapRing {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+            }
+            100% {
+                width: 80px;
+                height: 80px;
+                opacity: 0;
+            }
+        }
+
+        /* Music Toggle Button */
+        .music-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            bottom: max(24px, calc(env(safe-area-inset-bottom) + 16px));
+            right: max(24px, env(safe-area-inset-right));
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .music-btn.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .music-btn:active {
+            transform: scale(0.95);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .music-btn.playing {
+            animation: musicPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes musicPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 200, 221, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(255, 200, 221, 0); }
+        }
+
+        .music-icon {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .music-btn.playing .music-icon {
+            animation: musicBounce 0.6s ease-in-out infinite;
+        }
+
+        @keyframes musicBounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .music-btn.muted .music-icon {
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
     <!-- Background -->
     <div class="bg-wrapper"></div>
+    
+    <!-- Bottom fade for browser bar -->
+    <div class="bottom-fade"></div>
     
     <!-- Orbs -->
     <div class="orb orb-1"></div>
@@ -959,6 +1135,25 @@
     <audio id="bgMusic" loop preload="auto">
         <source src="sound.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Tap to Start Overlay -->
+    <div class="tap-overlay" id="tapOverlay">
+        <div class="tap-content">
+            <div class="tap-icon">🎂</div>
+            <div class="tap-title">Nichi's Birthday</div>
+            <div class="tap-subtitle">Tap anywhere to start</div>
+            <div class="tap-rings">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Toggle Button -->
+    <button class="music-btn" id="musicBtn" aria-label="Toggle Music">
+        <span class="music-icon">🎵</span>
+    </button>
 
     <!-- Main Content -->
     <div class="main-container">
@@ -1009,7 +1204,7 @@
                 <div class="cake">
                     <div class="candles">
                         <div class="candle"></div>
-                        <div class="candle" style="height: 28px;"></div>
+                        <div class="candle" style="height: 32px;"></div>
                         <div class="candle"></div>
                     </div>
                     <div class="cake-layer cake-top"></div>
@@ -1073,12 +1268,59 @@
     </div>
 
     <script>
-        // Audio
+        // Elements
         const bgMusic = document.getElementById('bgMusic');
-        
-        function playMusic() {
-            bgMusic.play().catch(e => console.log('Audio play failed:', e));
+        const tapOverlay = document.getElementById('tapOverlay');
+        const musicBtn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        // Start experience on tap
+        function startExperience() {
+            // Hide overlay
+            tapOverlay.classList.add('hidden');
+            
+            // Play music
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicBtn.classList.add('playing');
+                musicBtn.classList.remove('muted');
+            }).catch(e => {
+                console.log('Audio play failed:', e);
+                musicBtn.classList.add('muted');
+            });
+            
+            // Show music button
+            setTimeout(() => {
+                musicBtn.classList.add('visible');
+            }, 500);
+            
+            // Trigger confetti
+            setTimeout(createConfetti, 300);
+            setTimeout(createConfetti, 1000);
         }
+
+        // Tap overlay click
+        tapOverlay.addEventListener('click', startExperience);
+        tapOverlay.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            startExperience();
+        }, { passive: false });
+
+        // Music toggle
+        musicBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+                musicBtn.classList.remove('playing');
+                musicBtn.classList.add('muted');
+            } else {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    musicBtn.classList.add('playing');
+                    musicBtn.classList.remove('muted');
+                }).catch(e => console.log('Audio play failed:', e));
+            }
+        });
 
         // Sparkles
         function createSparkles() {
@@ -1144,22 +1386,9 @@
             this.parentElement.innerHTML = '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:50px;">👩</div>';
         });
 
-        // Play music on first interaction
-        let hasInteracted = false;
-        ['touchstart', 'click'].forEach(evt => {
-            document.addEventListener(evt, function() {
-                if (!hasInteracted) {
-                    playMusic();
-                    hasInteracted = true;
-                }
-            }, { once: true });
-        });
-
-        // Init
+        // Init sparkles on load
         window.addEventListener('load', () => {
             createSparkles();
-            setTimeout(createConfetti, 800);
-            setTimeout(createConfetti, 2500);
         });
     </script>
 </body>
